@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal{
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            border: 1px solid black;
+            background-color: red;
+            width: 50%;
+            padding: 20px;
+            display : none          
+        }
+    </style>
+</head>
+<body>
+    <button id = "openModal"> Open Modal</button>
+    <div class = "modal">
+        <h1>In the modal</h1>
+        <button id = "closeModal"> Close Modal</button>
+    </div>
+    <script>
+
+        class operation{
+            constructor(modal){
+                this.modal = modal
+            }
+            open(){
+                this.modal.style.display = 'initial'
+            }
+            close(){
+                this.modal.style.display = 'none'
+            }
+        }
+        
+        var modal = document.querySelector(".modal")
+        var op = new operation(modal)
+        var butt = document.getElementById("openModal")
+        butt.addEventListener('click',function(event){
+            op.open()
+        })
+        var closButt = document.getElementById("closeModal")
+        closButt.addEventListener('click',function(event){
+            op.close()
+        })
+    </script>
+</body>
+</html>

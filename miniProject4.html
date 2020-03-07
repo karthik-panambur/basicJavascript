@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Bon Apetit!!</h1>
+    <script>
+        function tipCalc(bill,tip = 15){
+            console.log(" Bill ammount is : ",bill);
+            console.log("Tip amount percentage is : ", tip);
+            var amount = bill + bill*tip/100;
+            return amount;
+        }
+        var toPay = tipCalc(100,20);
+        console.log("Total amount is : ", toPay);
+    </script>
+</body>
+</html>

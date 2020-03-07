@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "text"> replace </p>
+    <script>
+        var str_age = prompt("Enter your age : ");
+        var age = Number(str_age);
+        var tag = document.getElementById("text");
+        if(age && age >= 18){
+            
+            tag.innerHTML = " <i> Your age is : " + age + "</i>";
+        }
+        else{
+            tag.innerText = "Underage!!";
+            console.warn(" ooh not a number");
+        }
+    </script>
+</body>
+</html>

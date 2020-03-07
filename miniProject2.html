@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id  = "link"> replace this value</h1>
+
+    <script>
+        var inp = prompt("enter a URL");
+        if(inp.substr(0,4) != "http"){
+            console.log(inp);
+            inp = "http://" + inp;
+            console.log(inp);
+        }
+
+        var tag = document.getElementById("link");
+        tag.innerHTML = "<i><a href = " + inp + "> your link </a></i>";
+
+    </script>
+</body>
+</html>

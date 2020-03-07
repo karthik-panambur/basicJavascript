@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fontChanger{
+            color : red
+        }
+    </style>
+</head>
+<body>
+    <h1 style = "text-align: center; font-size : 50px"><i>JavaScriptForBeginners</i></h1>
+    <script>
+        var change = document.querySelector("h1")
+        console.log(change.innerText)
+        var letters = change.innerText.split('')
+        var html = ''
+        letters.forEach(letter => {
+            html = html + `<span class = "">${letter}</span>`
+        })
+        change.innerHTML = html;
+        var individual = document.querySelectorAll("span")
+        individual.forEach(node => {
+            node.addEventListener('mouseover',function(event){
+                this.classList.add("fontChanger")
+            })
+            node.addEventListener("mouseout", function(event){
+                this.classList.remove("fontChanger")
+            })
+        })
+    </script>
+</body>
+</html>

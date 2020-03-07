@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <small>I'm small too</small>
+    <h1 class = "title"> This is my title 
+        <small>change me too!!</small>
+    </h1>
+
+    <ul>
+        <li>number 1</li>
+        <li>number 2</li>
+        <li>number 3</li>
+        <li>number 4</li>
+        <li>number 5</li>
+    </ul>
+
+
+    <input type = "text" style="padding:20px; font-size: 30px ;" class = "form-control" value = "type!!">
+    <script>
+        var title = document.querySelector(".title")
+        var small = title.querySelector("small")
+        small.innerText = "woo hoo!!"
+
+        console.log(small.innerText)
+
+        var lis = document.querySelectorAll("li")
+        console.log(lis)
+        console.log(lis[2].innerText)
+
+        var txt = document.querySelector(".form-control")
+        //console.log(txt.innerText)
+        console.log(txt.value)
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "test">Introduce yourself please!!</h1>
+    <script>
+        var age = 25;
+        var intro = "My name is Karthik, I am " + age + " years old";
+
+        var tag = document.getElementById("test");
+        var oldText = tag.innerHTML;
+        tag.innerHTML = "<i>" + intro + "</i>";
+        console.log(oldText);
+        console.error(oldText);
+        console.warn(oldText);
+    </script>
+</body>
+</html>

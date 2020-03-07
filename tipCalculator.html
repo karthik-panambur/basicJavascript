@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <sentance> Bill amount is : </sentance><input type = "number"  class = "form-control" value = 0>
+<br/>
+<br/>
+<sentance> Tip is : </sentance> <input type = "number" class = "form-control" value = 0>
+<br/>
+<br/>
+<button class = "btn btn-primary" type = "button" onclick = "calculate()">total</button>
+
+<h3>Total will be displayed here</h3>
+
+<script>
+    function calculate(){
+        var input = document.querySelectorAll(".form-control")
+        var bill = input[0].value
+        var tip = input[1].value
+
+        bill = Number(bill)
+        tip = Number(tip)
+        var total = 0
+        if(bill && tip){
+            total = bill + bill* tip/100
+        }
+        console.log(bill,tip)
+        console.log(total)
+
+        var h3 = document.querySelector("h3")
+        h3.innerText = "Please pay : " + total + " dollars"
+    }
+</script>
+</body>
+</html>

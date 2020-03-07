@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class = "btn btn-primary btn-lg js-button">Click Me</button>
+    <h1 id = "counter">Number of Clicks</h1>
+    <script>
+        var totalClicks = 0
+        var btn = document.querySelector(".js-button")
+        var count = document.getElementById("counter")
+        btn.addEventListener('click',function(event){
+            totalClicks += 1
+            count.innerText = totalClicks
+        })
+    </script>
+</body>
+</html>

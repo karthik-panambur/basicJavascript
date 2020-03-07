@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project 5</title>
+</head>
+<body>
+    <div>
+        <label>background color changer: </label>
+        <input type = "text" class = "js-bgColor" style = 'padding:30px; font-size: 20px;'></input>
+    </div>
+    <div>
+        <label>text color changer: </label>
+        <input type = "text" class = "js-textColor" style = 'padding:30px; font-size: 20px;'></input>
+    </div>
+    <div>
+        <label>font size changer: </label>
+        <input type = "number" class = "js-fontSize" style = 'padding:30px; font-size: 20px;'></input>
+    </div>
+    <script>
+        var body = document.querySelector("body")
+        var bg = document.querySelector(".js-bgColor")
+        var text = document.querySelector(".js-textColor")
+        var font = document.querySelector(".js-fontSize")
+
+        bg.addEventListener('keyup',function(event){
+            var color = event.target.value
+            body.style.backgroundColor = color
+        })
+        text.addEventListener('keyup',function(event){
+            var color = event.target.value
+            body.style.color = color
+        })
+        font.addEventListener('keyup',function(event){
+            var size = event.target.value
+            body.style.fontSize = size + "px"
+        })
+    </script>
+</body>
+</html>

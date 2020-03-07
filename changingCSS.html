@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Changing CSS with JavaScript</h1>
+    <div>
+        <label>Bg Color: </label>
+        <input type = "text" class = "btn-bg-color" style = 'padding:30px; font-size: 30px;'></input>
+    </div>
+    <div>
+        <label>Text Color: </label>
+        <input type = "text" class = "btn-text-color" style = 'padding:30px; font-size: 30px;'></input>
+    </div>
+    <script>
+        var body = document.querySelector("body")
+        var bgColor = document.querySelector(".btn-bg-color")
+        var textColor = document.querySelector(".btn-text-color") 
+        
+        bgColor.addEventListener('keyup', function(event){
+            var color = event.target.value
+            body.style.backgroundColor = color
+        })
+
+        
+        textColor.addEventListener('keyup', function(event){
+            var color = event.target.value
+            body.style.color = color
+        })
+    </script>    
+</body>
+</html>

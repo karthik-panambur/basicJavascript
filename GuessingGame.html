@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guessing game</h1>
+    <br /><br />
+    <h2>Guess a number from 1 to 100, if you guess right you win</h2>
+    <span id = "try"></span>
+    <script>
+        const correctNumber = 99
+        var error = document.getElementById("try")
+        while(true){
+            var number = Number(prompt("enter a number"))
+            if(number == correctNumber){
+                error.innerHTML = "<i> You won, Congratulations!! </i>"
+                error.style.backgroundColor = "green"
+                 break
+            }
+            else{
+                error.innerHTML = "<i> oops!! try again, haha </i>"
+                error.style.backgroundColor = "red"
+             }
+            
+        }
+    </script>
+</body>
+</html>
